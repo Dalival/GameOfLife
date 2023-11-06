@@ -1,11 +1,15 @@
 ﻿using GameOfLife;
 
-var field = new Field(12, 12);
+var board = new Board(10, 10);
+var step = 0;
 
 while (true)
 {
-    Console.Write(field);
-    field.NextGeneration();
-    Thread.Sleep(1000);
+    Console.WriteLine(board);
+    Console.WriteLine($"Step {step++}");
+
+    board.Next();
+
+    Thread.Sleep(100);
     Console.Clear();
 }
